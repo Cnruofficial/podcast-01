@@ -3,34 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>Глубокое погружение</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://playerjs.com/playerjs.js"></script>
   <style>
-    body {
-      background-color: #121212;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     #player {
+      width: 100%;
       max-width: 600px;
-      margin: auto;
+      height: 120px; /* Высота аудиоплеера */
     }
   </style>
 </head>
 <body>
-  <h1>Глубокое погружение</h1>
   <div id="player"></div>
 
   <script>
     var player = new Playerjs({
       id: "player",
-      file: [{
-        title: "Цифровой образ Доминика",
-        poster: "https://i.postimg.cc/nVSGvz9J/Untitled-6.jpg",
-        file: "https://pixeldrain.com/api/file/o11yBK2h?download"
-      }],
-      autoplay: false
+      file: [
+        {
+          title: "Цифровой образ Доминика",
+          poster: "https://i.postimg.cc/nVSGvz9J/Untitled-6.jpg",
+          file: "https://pixeldrain.com/api/file/o11yBK2h?download"
+        },
+        {
+          title: "Творческий путь Доминика",
+          poster: "https://i.postimg.cc/nVSGvz9J/Untitled-6.jpg",
+          file: "https://pixeldrain.com/api/file/example.mp3" // ← заменишь на свой файл
+        }
+      ],
+      type: "audio",
+      autoplay: false,
+      poster: "https://i.postimg.cc/nVSGvz9J/Untitled-6.jpg"
     });
   </script>
 </body>
