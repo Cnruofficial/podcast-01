@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Глубокое погружение</title>
+  <script src="https://playerjs.com/playerjs.js"></script>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    #player {
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Глубокое погружение</h1>
+  <div id="player"></div>
+
+  <script>
+    var player = new Playerjs({
+      id: "player",
+      file: [{
+        title: "Цифровой образ Доминика",
+        poster: "https://i.postimg.cc/nVSGvz9J/Untitled-6.jpg",
+        file: "https://pixeldrain.com/api/file/o11yBK2h?download"
+      }],
+      autoplay: false
+    });
+  </script>
+</body>
+</html>
